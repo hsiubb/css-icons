@@ -44,6 +44,7 @@
 	border-width: 0 0 .1em;
 }
 
+
 .css-icon-close:before {
 	top: .5em;
 	margin-top: -.05em;
@@ -295,10 +296,37 @@
 }
 .css-icon-computer:after {
 	bottom: .15em;
-	/*border-width: 0 0 .1em;*/
 	border-width: 0 .1em .15em;
 	border-color: transparent transparent currentcolor;
-	/*border-radius: 3px;*/
+}
+
+.css-icon-file:before {
+	left: .6em;
+	width: .3em;
+	height: .3em;
+	border-width: .15em;
+	border-radius: 0 .3em 0 3px;
+}
+.css-icon-file:after {
+	top: 0;
+	left: .1em;
+	width: .8em;
+	height: 1em;
+	border-width: 2px;
+	border-radius: 3px .3em 3px 3px;
+}
+
+.css-icon-book:before {
+	width: 1em;
+	height: .8em;
+	border-width: .1em .1em 0;
+	border-radius: .2em 0 0 0;
+}
+.css-icon-book:after {
+	width: 1em;
+	height: .4em;
+	border-width: .1em;
+	border-radius: .2em 0 0 .2em;
 }
 
 
@@ -360,6 +388,58 @@
 	border-color: #fff;
 }
 
+
+/* groups */
+.css-icon-sunny:before {
+	width: .8em;
+	height: .8em;
+	margin: .1em;
+	border-width: 2px;
+	border-radius: 50%;
+}
+.css-icon-sunny:after {
+	left: .45em;
+	top: .45em;
+	width: .1em;
+	height: .1em;
+	border-color: transparent;
+	border-width: .05em;
+	border-radius: .2em;
+	box-shadow: 0 -.6em currentcolor, -.6em 0 currentcolor, 0 .6em currentcolor, .6em 0 currentcolor, .4em .4em currentcolor, .4em -.4em currentcolor, -.4em -.4em currentcolor, -.4em .4em currentcolor;
+}
+
+.css-icon-rainy:before {
+	left: .05em;
+	width: .9em;
+	height: .45em;
+	border-width: 2px;
+	border-radius: .5em .5em .2em .2em;
+}
+.css-icon-rainy:after {
+	top: .7em;
+	left: .4em;
+	height: 2px;
+	width: .2em;
+	border-color: transparent;
+	border-width: 2px 0 0;
+	box-shadow: -.2em 0 currentcolor, .2em 0 currentcolor, 0 -.2em currentcolor, 0 .2em currentcolor;
+	transform: rotate(45deg);
+}
+
+.css-icon-windy:before {
+	left: .4em;
+	width: .4em;
+	height: .4em;
+	border-width: 2px 2px 2px 0;
+	border-radius: 50% 50% 50% 0;
+	/*box-shadow: .2em .1em currentcolor;*/
+}
+.css-icon-windy:after {
+	bottom: .6em;
+	width: .4em;
+	border-width: 2px 0 0;
+	box-shadow: .3em .1em currentcolor, 0 .1em currentcolor;
+}
 
 .css-icon-play:before {
 	top: .2em;

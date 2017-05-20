@@ -30,16 +30,17 @@ img {border: 0 none;}
 	border: 1px solid #ddd;
 	border-radius: .2em;
 }
+
 .container {
 	max-width: 1200px;
 	padding: 30px;
 	margin: auto;
 }
-.sub-title {
+.title {
 	clear: left;
-	padding-top: 30px;
 	padding-bottom: 10px;
 }
+
 .icon-box {
 	position: relative;
 	float: left;
@@ -50,9 +51,6 @@ img {border: 0 none;}
 	border: 1px solid #ddd;
 	border-radius: .2em;
 }
-.container-sm .icon-box {font-size: 20px;}
-.viewing {background: #09f;border-color: transparent;}
-.viewing [class*="css-icon-"] {color: #eee;}
 .icon-name {
 	position: absolute;
 	left: -10px;
@@ -62,3 +60,5 @@ img {border: 0 none;}
 	text-align: center;
 	word-wrap: break-all;
 }
+.viewing {background: #09f;border-color: transparent;}
+.viewing [class*="css-icon-"] {color: #eee;}
