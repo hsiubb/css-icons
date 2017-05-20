@@ -46,12 +46,13 @@ img {border: 0 none;}
 	margin: 10px 20px 30px;
 	padding: .5em;
 	font-size: 40px;
+	background: #f8f8f8;
 	border: 1px solid #ddd;
 	border-radius: .2em;
 }
 .container-sm .icon-box {font-size: 20px;}
 .viewing {background: #09f;border-color: transparent;}
-.viewing [class*="css-icon-"] {color: #fff;}
+.viewing [class*="css-icon-"] {color: #eee;}
 .icon-name {
 	position: absolute;
 	left: -10px;

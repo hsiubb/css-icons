@@ -66,24 +66,54 @@
 			<span class="icon-name">search</span>
 		</a>
 		<a class="icon-box" href="javascript:;">
-			<i class="css-icon-position" data-icon="heart"></i>
+			<i class="css-icon-position" data-icon="drop"></i>
 			<span class="icon-name">position</span>
 		</a>
 		<a class="icon-box" href="javascript:;">
-			<i class="css-icon-heart" data-icon="drop"></i>
-			<span class="icon-name">heart</span>
-		</a>
-		<a class="icon-box" href="javascript:;">
-			<i class="css-icon-drop" data-icon="loading"></i>
+			<i class="css-icon-drop" data-icon="focus"></i>
 			<span class="icon-name">drop</span>
 		</a>
 		<a class="icon-box" href="javascript:;">
-			<i class="css-icon-loading" data-icon="grib"></i>
-			<span class="icon-name">loading</span>
+			<i class="css-icon-focus" data-icon="computer"></i>
+			<span class="icon-name">focus</span>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-computer" data-icon="grib"></i>
+			<span class="icon-name">computer</span>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-loading-1" data-icon="loading-2"></i>
+			<span class="icon-name">loading-1</span>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-loading-2" data-icon="yinyang"></i>
+			<span class="icon-name">loading-2</span>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-yinyang" data-icon="loading-1"></i>
+			<span class="icon-name">yinyang</span>
 		</a>
 		<div class="clr"></div>
 
 		<h3 class="sub-title">Groups</h3>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-play" data-icon="pause"></i>
+			<span class="icon-name">play</span>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-pause" data-icon="play"></i>
+			<span class="icon-name">pause</span>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-stop"></i>
+			<span class="icon-name">stop</span>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-record"></i>
+			<span class="icon-name">record</span>
+		</a>
+		<div class="clr"></div>
+
 		<a class="icon-box" href="javascript:;">
 			<i class="css-icon-arrow-top" data-icon="arrow-right"></i>
 			<span class="icon-name">arrow-top</span>
@@ -131,6 +161,16 @@
 		<div class="clr"></div>
 
 		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-heart" data-icon="love"></i>
+			<span class="icon-name">heart</span>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-love" data-icon="heart"></i>
+			<span class="icon-name">love</span>
+		</a>
+		<div class="clr"></div>
+
+		<a class="icon-box" href="javascript:;">
 			<i class="css-icon-checkbox" data-icon="checkbox-checked"></i>
 			<span class="icon-name">checkbox</span>
 		</a>
@@ -163,15 +203,15 @@
 	</div>
 
 	<script>
-		// (function($) {
-		// 	$('#input').on('keyup', function(evnt) {
-		// 		$('.viewing').removeClass('viewing');
-		// 		var val = $(this).val().replace(/(^\s)($\s)/g,'');
-		// 		$('#css-icon').prop('class','css-icon- css-icon-'+val);
-		// 		$('.container .css-icon-'+val).closest('a').addClass('viewing');
-		// 		if(val === '') {$('#css-icon').prop('class','css-icon-search');}
-		// 	});
-		// }(jQuery));
+		(function($) {
+			$('#input').on('keyup', function(evnt) {
+				$('.viewing').removeClass('viewing');
+				var val = $(this).val().replace(/(^\s)($\s)/g,'');
+				$('#css-icon').prop('class','css-icon- css-icon-'+val);
+				$('.container .css-icon-'+val).closest('a').addClass('viewing');
+				if(val === '') {$('#css-icon').prop('class','css-icon-search');}
+			});
+		}(jQuery));
 	</script>
 </body>
 </html>

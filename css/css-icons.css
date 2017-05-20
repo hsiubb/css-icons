@@ -214,22 +214,39 @@
 	border-color: currentcolor transparent transparent transparent;
 }
 
-.css-icon-heart:before {
+
+.css-icon-heart:before,
+.css-icon-heart:after {
 	top: .1em;
-	left: .15em;
 	width: .5em;
 	height: .8em;
-	border-width: .25em;
-	border-radius: 1em 1em 0 0;
+	border-radius: 50% 50% 0 0;
+}
+.css-icon-heart:before {
+	left: .15em;
+	border-width: 1px 0 0 1px;
 	transform: rotate(-45deg);
 }
 .css-icon-heart:after {
-	top: .1em;
 	left: .35em;
+	border-width: 1px 1px 0 0;
+	transform: rotate(45deg);
+}
+
+.css-icon-love:before,
+.css-icon-love:after {
+	top: .1em;
 	width: .5em;
 	height: .8em;
 	border-width: .25em;
 	border-radius: 1em 1em 0 0;
+}
+.css-icon-love:before {
+	left: .15em;
+	transform: rotate(-45deg);
+}
+.css-icon-love:after {
+	left: .35em;
 	transform: rotate(45deg);
 }
 
@@ -248,23 +265,120 @@
 	border-radius: 50%;
 }
 
+.css-icon-focus:before {
+	height: 1em;
+	border-style: dashed;
+	border-width: .1em;
+	border-radius: .1em;
+}
+.css-icon-focus:after {
+	top: .4em;
+	left: .4em;
+	width: .2em;
+	height: .2em;
+	border-width: 1px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+.css-icon-computer:before {
+	content: '-';
+	line-height: 0;
+	text-align: left;
+	top: .2em;
+	left: .1em;
+	width: .8em;
+	height: .5em;
+	border-width: 2px 2px 1px;
+	border-radius: 3px 3px 0 0;
+}
+.css-icon-computer:after {
+	bottom: .15em;
+	/*border-width: 0 0 .1em;*/
+	border-width: 0 .1em .15em;
+	border-color: transparent transparent currentcolor;
+	/*border-radius: 3px;*/
+}
 
 
 @keyframes loading {
   0 {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
 }
-.css-icon-loading:before {
+.css-icon-loading-1:before {
   top: .1em;
   left: .1em;
   width: .8em;
   height: .8em;
-  border: 1px dashed;
+	border-style: dashed;
+  border-width: 1px;
   border-top: 1px solid currentcolor;
   border-radius: 50%;
   -webkit-animation: loading 1s linear infinite;
   animation: loading 1s linear infinite;
 }
+.css-icon-loading-2 {
+	border-top: 2px solid currentcolor;
+  border-radius: 50%;
+  -webkit-animation: loading 1s linear infinite;
+  animation: loading 1s linear infinite;
+}
+.css-icon-loading-2:before {
+  top: .1em;
+  left: .1em;
+  width: .8em;
+  height: .8em;
+	border-width: 2px 0 0 0;
+  border-radius: 50%;
+  -webkit-animation: loading 1s linear infinite;
+  animation: loading 1s linear infinite;
+}
+.css-icon-yinyang {
+	border: 1px solid currentcolor;
+	border-bottom: .5em solid currentcolor;
+	border-radius: 50%;
+	background: #fff;
+  -webkit-animation: loading 1s linear infinite;
+  animation: loading 1s linear infinite;
+}
+.css-icon-yinyang:before,
+.css-icon-yinyang:after {
+	top: .25em;
+	width: .48em;
+	height: .48em;
+	border-width: .2em;
+	border-radius: .5em;
+}
+.css-icon-yinyang:before {
+	left: 0;
+	right: 50%;
+}
+.css-icon-yinyang:after {
+	left: 50%;
+	right: 0;
+	border-color: #fff;
+}
+
+
+.css-icon-play:before {
+	top: .2em;
+	left: .25em;
+	width: .5em;
+	height: .6em;
+	border-color: transparent transparent transparent currentcolor;
+	border-width: .3em 0 .3em .5em;
+}
+.css-icon-pause:before,
+.css-icon-stop:before,
+.css-icon-record:before {
+	top: .2em;
+	left: .2em;
+	width: .6em;
+	height: .6em;
+	border-width: .3em;
+}
+.css-icon-pause:before {border-width: 0 .2em;}
+.css-icon-record:before {border-radius: .6em;}
 
 [class*="css-icon-arrow-"],
 [class*="css-icon-angle-"] {
