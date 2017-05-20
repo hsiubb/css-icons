@@ -239,14 +239,15 @@
 	width: .5em;
 	height: .8em;
 	border-width: .25em;
-	border-radius: 1em 1em 0 0;
 }
 .css-icon-love:before {
 	left: .15em;
+	border-radius: 1em 1em 2em 0;
 	transform: rotate(-45deg);
 }
 .css-icon-love:after {
 	left: .35em;
+	border-radius: 1em 1em 0 2em;
 	transform: rotate(45deg);
 }
 
