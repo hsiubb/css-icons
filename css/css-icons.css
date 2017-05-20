@@ -426,7 +426,7 @@
 	border-width: .15em .3em .25em;
 	border-radius: .1em .1em .2em .2em;
 }
-.css-icon-unlock:before {transform: translateX(-.25em) rotateY(-180deg);}
+.css-icon-unlock:before {transform: translateX(-.25em);}
 .css-icon-unlock:after {transform: translateX(.1em);}
 
 .css-icon-checkbox:before,
