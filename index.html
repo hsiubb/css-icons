@@ -4,37 +4,115 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/css-icons.css">
 	<script src="js/jq.js"></script>
 </head>
 <body>
-	<div class="container">
+	<div>
 		<a class="icon-box" href="javascript:;">
-			<i class="css-icon-menu" data-icon="close"></i>
+			<i id="css-icon" class="css-icon-"></i>
 		</a>
-
-		<a class="icon-box" href="javascript:;">
-			<i class="css-icon-close" data-icon="menu"></i>
-		</a>
-
+		<input id="input" class="icon-input" type="text" autocomplete="off" placeholder='请输入图标名称进行预览，如:"menu"' />
+	</div>
+	<div class="container container-sm clrfix">
+		<h2>Small Icons</h2>
 		<a class="icon-box" href="javascript:;">
 			<i class="css-icon-grib" data-icon="menu"></i>
 		</a>
-
 		<a class="icon-box" href="javascript:;">
-			<i class="css-icon-user" data-icon="close"></i>
+			<i class="css-icon-menu" data-icon="close"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-close" data-icon="home"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-home" data-icon="user"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-user" data-icon="pencil"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-pencil" data-icon="lock"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-lock" data-icon="unlock"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-unlock" data-icon="card"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-card" data-icon="cart"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-cart" data-icon="label"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-label" data-icon="search"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-search" data-icon="grib"></i>
+		</a>
+	</div>
+
+	<div class="container container-lg clrfix">
+		<h2>Large Icons</h2>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-grib" data-icon="menu"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-menu" data-icon="close"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-close" data-icon="home"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-home" data-icon="user"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-user" data-icon="pencil"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-pencil" data-icon="lock"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-lock" data-icon="unlock"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-unlock" data-icon="card"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-card" data-icon="cart"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-cart" data-icon="label"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-label" data-icon="search"></i>
+		</a>
+		<a class="icon-box" href="javascript:;">
+			<i class="css-icon-search" data-icon="grib"></i>
 		</a>
 	</div>
 
 	<script>
-		$(document).ready(function() {
+		(function($) {
 			$('[class*="css-icon-"]').closest('a').click(function() {
 				var $icon = $(this).find('[class*="css-icon-"]');
-				var setClass = $icon.prop('class').match(/css-icon-\w+/g)[0].replace('css-icon-','');
-				$icon.removeClass();
-				$icon.addClass('css-icon-'+$icon.attr('data-icon'));
-				$icon.attr('data-icon',setClass);
+				if($icon.attr('data-icon')) {
+					var setClass = $icon.prop('class').match(/css-icon-\w+/g)[0].replace('css-icon-','');
+					$icon.removeClass();
+					$icon.addClass('css-icon-'+$icon.attr('data-icon'));
+					$icon.attr('data-icon',setClass);
+				}
 			});
-		});
+
+			$('#input').on('keyup', function(evnt) {
+				$('.viewing').removeClass('viewing');
+				var val = $(this).val().replace(/(^\s)($\s)/g,'');
+				$('#css-icon').prop('class','css-icon- css-icon-'+val);
+				$('.container .css-icon-'+val).closest('a').addClass('viewing');
+			});
+		}(jQuery));
 	</script>
 </body>
 </html>

@@ -1,0 +1,195 @@
+
+[class*="css-icon-"] {
+	position: relative;
+	display: block;
+	width: 1em;
+	height: 1em;
+	color: #999;
+	text-align: center;
+
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+[class*="css-icon-"]:before,
+[class*="css-icon-"]:after {
+	content: '\0020';
+	position: absolute;
+	left: 0;
+	display: block;
+	width: 1em;
+	border-style: solid;
+	border-color: currentcolor;
+	border-width: 0;
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+[class*="css-icon-"]:after {bottom: 0;}
+
+.css-icon-menu:before {
+	top: 0;
+	bottom: .5em;
+	margin-bottom: -.05em;
+	border-width: .1em 0;
+}
+.css-icon-menu:after {
+	top: .5em;
+	border-width: 0 0 .1em;
+}
+
+.css-icon-close:before {
+	top: .5em;
+	margin-top: -.05em;
+	border-width: .1em 0 0;
+	transform: rotate(45deg);
+}
+.css-icon-close:after {
+	bottom: .5em;
+	margin-bottom: -.05em;
+	border-width: 0 0 .1em;
+	transform: rotate(135deg);
+}
+
+.css-icon-grib {height: 1em;}
+.css-icon-grib:before {
+	top: 0;
+	height: .45em;
+	border-width: 0 .45em;
+}
+.css-icon-grib:after {
+	height: .45em;
+	border-width: 0 .45em;
+}
+
+.css-icon-home:before {
+	top: 0;
+	border-color: transparent transparent currentcolor;
+	border-width: 0 .5em .55em;
+}
+.css-icon-home:after {
+	top: .5em;
+	left: .05em;
+	width: .9em;
+	height: .5em;
+	border: solid currentcolor;
+	border-width: .2em .39em 0;
+}
+
+.css-icon-user:before {
+	top: 0;
+	left: .25em;
+	width: .5em;
+	border-width: .25em;
+	border-radius: 50%;
+}
+.css-icon-user:after {
+	height: .5em;
+	border-width: .5em 0 0;
+	border-radius: .5em .5em 0 0;
+}
+
+
+.css-icon-pencil:before {
+	top: -.1em;
+	left: .4em;
+	width: .3em;
+	height: 1em;
+	border-width: .2em 0 .74em;
+	border-radius: .08em .08em 0 0;
+	transform: rotate(45deg);
+}
+.css-icon-pencil:after {
+	bottom: .1em;
+	left: .07em;
+	width: .2em;
+	border-color: transparent transparent currentcolor transparent;
+	border-width: 0 .2em .2em 0;
+}
+
+
+.css-icon-lock:before {
+	left: .25em;
+	width: .5em;
+	height: .4em;
+	border-width: .1em .1em 0;
+	border-radius: .2em .2em 0 0;
+}
+.css-icon-lock:after {
+	left: .15em;
+	width: .7em;
+	height: .6em;
+	border-width: .15em .3em .25em;
+	border-radius: .1em .1em .2em .2em;
+}
+
+.css-icon-unlock:before {
+	left: .25em;
+	width: .5em;
+	height: .4em;
+	border-width: .1em .1em 0;
+	border-radius: .2em .2em 0 0;
+	transform: translateX(-.25em) rotateY(-180deg);
+}
+.css-icon-unlock:after {
+	left: .15em;
+	width: .7em;
+	height: .6em;
+	border-width: .15em .3em .25em;
+	border-radius: .1em .1em .2em .2em;
+	transform: translateX(.1em);
+}
+
+.css-icon-card:before {
+	content: '..';
+	letter-spacing: -.1em;
+	line-height: .3em;
+	text-align: left;
+	top: .1em;
+	height: .8em;
+	border-width: .1em;
+	border-radius: .1em;
+}
+.css-icon-card:after {
+	bottom: .5em;
+	border-width: 0 0 .2em;
+}
+
+.css-icon-cart:before {
+}
+.css-icon-cart:after {
+}
+
+.css-icon-label:before {
+	left: .2em;
+	width: .6em;
+	height: 1em;
+	border-width: 0 .1em .1em;
+	border-radius: .1em;
+	transform: rotate(45deg);
+}
+.css-icon-label:after {
+	top: .05em;
+	left: .75em;
+	width: .2em;
+	height: .2em;
+	border-width: .05em;
+	border-radius: 50%;
+}
+
+.css-icon-search:before {
+  top: 0;
+  left: .2em;
+  width: .8em;
+  height: .8em;
+  border-width: .1em;
+  border-radius: 50%;
+}
+.css-icon-search:after {
+  left: .15em;
+  width: .1em;
+  border-width: .4em 0 0;
+  transform: rotate(45deg);
+}
