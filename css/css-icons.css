@@ -3,7 +3,6 @@
 	display: block;
 	width: 1em;
 	height: 1em;
-	color: #333;
 	text-align: center;
 
   speak: none;
@@ -27,6 +26,17 @@
 	transition: all .3s ease-in-out;
 }
 [class*="css-icon-"]:after {bottom: 0;}
+
+.css-icon-grib {height: 1em;}
+.css-icon-grib:before {
+	top: 0;
+	height: .45em;
+	border-width: 0 .45em;
+}
+.css-icon-grib:after {
+	height: .45em;
+	border-width: 0 .45em;
+}
 
 .css-icon-menu:before {
 	top: .1em;
@@ -71,33 +81,24 @@
 	border-width: 0 0 .1em;
 	transform: rotate(135deg);
 }
-/*
-.css-icon-tick:before {
-	left: .2em;
-	top: .4em;
-	border-width: 0 0 .1em;
-	transform: rotate(-45deg);
-}
-.css-icon-tick:after {
-	top: .55em;
-	left: -.05em;
-	width: .5em;
-	height: 0;
-	border-width: .1em 0 0;
+
+.css-icon-pencil:before {
+	top: -.1em;
+	left: .4em;
+	width: .3em;
+	height: 1em;
+	border-width: .2em 0 .74em;
+	border-radius: .08em .08em 0 0;
 	transform: rotate(45deg);
-}*/
-
-
-.css-icon-grib {height: 1em;}
-.css-icon-grib:before {
-	top: 0;
-	height: .45em;
-	border-width: 0 .45em;
 }
-.css-icon-grib:after {
-	height: .45em;
-	border-width: 0 .45em;
+.css-icon-pencil:after {
+	bottom: .1em;
+	left: .07em;
+	width: .2em;
+	border-color: transparent transparent currentcolor transparent;
+	border-width: 0 .2em .2em 0;
 }
+
 
 .css-icon-home:before {
 	top: 0;
@@ -124,24 +125,6 @@
 	height: .5em;
 	border-width: .4em 0 0;
 	border-radius: .5em .5em 0 0;
-}
-
-
-.css-icon-pencil:before {
-	top: -.1em;
-	left: .4em;
-	width: .3em;
-	height: 1em;
-	border-width: .2em 0 .74em;
-	border-radius: .08em .08em 0 0;
-	transform: rotate(45deg);
-}
-.css-icon-pencil:after {
-	bottom: .1em;
-	left: .07em;
-	width: .2em;
-	border-color: transparent transparent currentcolor transparent;
-	border-width: 0 .2em .2em 0;
 }
 
 .css-icon-label:before {
@@ -277,7 +260,7 @@
 	background: #fff;
 }
 
-.css-icon-computer:before {
+.css-icon-laptop:before {
 	content: '-';
 	line-height: 0;
 	text-align: left;
@@ -288,7 +271,7 @@
 	border-width: 2px 2px 1px;
 	border-radius: 3px 3px 0 0;
 }
-.css-icon-computer:after {
+.css-icon-laptop:after {
 	bottom: .15em;
 	border-width: 0 .1em .15em;
 	border-color: transparent transparent currentcolor;
@@ -418,6 +401,39 @@
 	border-color: #fff;
 }
 
+[class*="css-icon-battery"]:before,
+.css-icon-charging:before {
+	top: .2em;
+	width: .9em;
+	height: .6em;
+	border-width: .1em;
+	border-radius: .1em;
+}
+[class*="css-icon-battery"]:after,
+.css-icon-charging:after {
+	top: .35em;
+	left: .9em;
+	width: .1em;
+	height: .3em;
+	border-width: 0 .05em 0 .05em;
+}
+.css-icon-battery-full:after {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 currentcolor, -.3em 0 1px 0 currentcolor;}
+.css-icon-battery:after {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor;}
+@keyframes charge {
+	0 {box-shadow: -.75em 0 1px 0 transparent, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
+	30% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
+	50% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
+	70% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 currentcolor, -.3em 0 1px 0 transparent;}
+	90% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 currentcolor, -.3em 0 1px 0 currentcolor;}
+	100% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 currentcolor, -.3em 0 1px 0 currentcolor;}
+}
+.css-icon-charging:after {
+	box-shadow: -.75em 0 1px 0 transparent, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;
+	transition: unset;
+	-webkit-animation: charge 4s linear infinite;
+}
+
+
 
 /* groups */
 .css-icon-sunny:before {
@@ -489,14 +505,19 @@
 	box-shadow: .3em .1em currentcolor, 0 .1em currentcolor;
 }
 
-.css-icon-play:before {
+.css-icon-play:before,
+.css-icon-rewind:before,
+.css-icon-rewind:after,
+.css-icon-forward:before,
+.css-icon-forward:after {
 	top: .2em;
-	left: .25em;
+	left: 0;
 	width: .5em;
 	height: .6em;
 	border-color: transparent transparent transparent currentcolor;
 	border-width: .3em 0 .3em .5em;
 }
+.css-icon-play:before {left: .25em;}
 .css-icon-pause:before,
 .css-icon-stop:before,
 .css-icon-record:before {
@@ -508,6 +529,15 @@
 }
 .css-icon-pause:before {border-width: 0 .2em;}
 .css-icon-record:before {border-radius: .6em;}
+
+.css-icon-rewind:after,
+.css-icon-forward:after {left: .5em;}
+.css-icon-forward:before,
+.css-icon-forward:after {
+	border-color: transparent currentcolor transparent transparent;
+	border-width: .3em .5em .3em 0;
+}
+
 
 .css-icon-prev:before {
 	top: .4em;
@@ -574,18 +604,20 @@
 
 .css-icon-lock:before,
 .css-icon-unlock:before {
+	top: .1em;
 	left: .25em;
 	width: .5em;
-	height: .4em;
+	height: .3em;
 	border-width: .1em .1em 0;
 	border-radius: .2em .2em 0 0;
 }
 .css-icon-lock:after,
 .css-icon-unlock:after {
+	bottom: .1em;
 	left: .15em;
 	width: .7em;
-	height: .6em;
-	border-width: .15em .3em .25em;
+	height: .5em;
+	border-width: .15em .3em .2em;
 	border-radius: .1em .1em .2em .2em;
 }
 .css-icon-unlock:before {transform: translateX(-.25em);}

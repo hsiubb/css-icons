@@ -7,7 +7,7 @@ img {border: 0 none;}
 
 .fl {float: left; _display: inline;}
 .fr {float: right; _display: inline;}
-.clr {clear: both; height: 0; margin: 10px; overflow: hidden;}
+.clr {clear: both; height: 0; margin-bottom: 40px; overflow: hidden;}
 .clrfix {*zoom: 1;}
 .clrfix:before, .clrfix:after {content: '\0020';display: block;height: 0;clear: both;visibility: hidden;}
 
@@ -47,9 +47,24 @@ img {border: 0 none;}
 	margin: 10px 20px 30px;
 	padding: .5em;
 	font-size: 40px;
-	background: #f8f8f8;
+	color: #333;
+	background: #eee;
 	border: 1px solid #ddd;
 	border-radius: .2em;
+}
+.css-icon:hover {
+	background: #fff;
+	/*border: 1px solid #eee;*/
+	/*box-shadow: inset -1px -1px 2px 1px #eee, 2px 2px 2px 1px #eee;*/
+}
+.css-icon:active {
+	top: 1px;
+	left: 1px;
+	box-shadow: inset -1px -1px 2px 1px #eee, 0 0 2px 1px #eee;
+}
+.css-icon:active .icon-name {
+	left: -12px;
+	top: 104%;
 }
 .icon-name {
 	position: absolute;
@@ -61,4 +76,4 @@ img {border: 0 none;}
 	word-wrap: break-all;
 }
 .viewing {background: #09f;border-color: transparent;}
-.viewing [class*="css-icon-"] {color: #eee;}
+/*.viewing [class*="css-icon-"] {color: #eee;}*/

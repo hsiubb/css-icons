@@ -32,20 +32,20 @@
 			<span class="icon-name">close</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-tick" data-icon="home"></i>
+			<i class="css-icon-tick" data-icon="pencil"></i>
 			<span class="icon-name">tick</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-home" data-icon="user"></i>
-			<span class="icon-name">home</span>
+			<i class="css-icon-pencil" data-icon="user"></i>
+			<span class="icon-name">pencil</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-user" data-icon="pencil"></i>
+			<i class="css-icon-user" data-icon="home"></i>
 			<span class="icon-name">user</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-pencil" data-icon="label"></i>
-			<span class="icon-name">pencil</span>
+			<i class="css-icon-home" data-icon="label"></i>
+			<span class="icon-name">home</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
 			<i class="css-icon-label" data-icon="card"></i>
@@ -72,12 +72,12 @@
 			<span class="icon-name">drop</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-focus" data-icon="computer"></i>
+			<i class="css-icon-focus" data-icon="laptop"></i>
 			<span class="icon-name">focus</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-computer" data-icon="file"></i>
-			<span class="icon-name">computer</span>
+			<i class="css-icon-laptop" data-icon="file"></i>
+			<span class="icon-name">laptop</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
 			<i class="css-icon-file" data-icon="book"></i>
@@ -116,6 +116,20 @@
 		<div class="clr"></div>
 
 		<a class="css-icon" href="javascript:;">
+			<i class="css-icon-battery-full" data-icon="battery"></i>
+			<span class="icon-name">battery-full</span>
+		</a>
+		<a class="css-icon" href="javascript:;">
+			<i class="css-icon-battery" data-icon="battery-low"></i>
+			<span class="icon-name">battery</span>
+		</a>
+		<a class="css-icon" href="javascript:;">
+			<i class="css-icon-battery-low" data-icon="charging"></i>
+			<span class="icon-name">battery-low</span>
+		</a>
+		<div class="clr"></div>
+
+		<a class="css-icon" href="javascript:;">
 			<i class="css-icon-sunny" data-icon="rainy"></i>
 			<span class="icon-name">sunny</span>
 		</a>
@@ -142,12 +156,20 @@
 			<span class="icon-name">pause</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-stop"></i>
+			<i class="css-icon-stop" data-icon="play"></i>
 			<span class="icon-name">stop</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-record"></i>
+			<i class="css-icon-record" data-icon="stop"></i>
 			<span class="icon-name">record</span>
+		</a>
+		<a class="css-icon" href="javascript:;">
+			<i class="css-icon-rewind" data-icon="play"></i>
+			<span class="icon-name">rewind</span>
+		</a>
+		<a class="css-icon" href="javascript:;">
+			<i class="css-icon-forward" data-icon="play"></i>
+			<span class="icon-name">forward</span>
 		</a>
 		<div class="clr"></div>
 
@@ -198,21 +220,21 @@
 		<div class="clr"></div>
 
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-lock" data-icon="unlock"></i>
+			<i class="css-icon-lock" data-icon="unlock" data-callback="view"></i>
 			<span class="icon-name">lock</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-unlock" data-icon="lock"></i>
+			<i class="css-icon-unlock" data-icon="lock" data-callback="view"></i>
 			<span class="icon-name">unlock</span>
 		</a>
 		<div class="clr"></div>
 
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-heart" data-icon="love"></i>
+			<i class="css-icon-heart" data-icon="love" data-callback="view"></i>
 			<span class="icon-name">heart</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-love" data-icon="heart"></i>
+			<i class="css-icon-love" data-icon="heart" data-callback="view"></i>
 			<span class="icon-name">love</span>
 		</a>
 		<div class="clr"></div>
@@ -258,6 +280,12 @@
 				$('.container .css-icon-'+val).closest('a').addClass('viewing');
 				if(val === '') {$('#css-icon').prop('class','css-icon-search');}
 			});
+
+			$.iconCallBack['view'] = function(target, preclass, curcalss) {
+				console.log(target);
+				console.log('preclass:'+preclass);
+				console.log('curcalss:'+curcalss);
+			};
 		}(jQuery));
 	</script>
 </body>
