@@ -228,40 +228,29 @@
 
 
 .css-icon-heart:before,
-.css-icon-heart:after {
-	top: .1em;
-	width: .5em;
-	height: .78em;
-	border-radius: 50% 50% 0 0;
-}
-.css-icon-heart:before {
-	left: .15em;
-	border-width: 1px 0 0 1px;
-	transform: rotate(-45deg);
-}
-.css-icon-heart:after {
-	left: .35em;
-	border-width: 1px 1px 0 0;
-	transform: rotate(45deg);
-}
-
+.css-icon-heart:after,
 .css-icon-love:before,
 .css-icon-love:after {
 	top: .1em;
 	width: .5em;
-	height: .8em;
-	border-width: .25em;
+	height: .78em;
 }
+.css-icon-heart:before,
 .css-icon-love:before {
 	left: .15em;
-	border-radius: 1em 1em 2em 0;
 	transform: rotate(-45deg);
 }
+.css-icon-heart:after,
 .css-icon-love:after {
 	left: .35em;
-	border-radius: 1em 1em 0 2em;
 	transform: rotate(45deg);
 }
+.css-icon-heart:before, .css-icon-heart:after {border-radius: 50% 50% 0 0;}
+.css-icon-love:before, .css-icon-love:after {border-width: .25em;}
+.css-icon-heart:before {border-width: 1px 0 0 1px;}
+.css-icon-heart:after {border-width: 1px 1px 0 0;}
+.css-icon-love:before {border-radius: 1em 1em 2em 0;}
+.css-icon-love:after {border-radius: 1em 1em 0 2em;}
 
 .css-icon-drop:before {
 	left: .15em;
