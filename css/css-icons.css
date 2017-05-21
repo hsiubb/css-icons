@@ -231,7 +231,7 @@
 .css-icon-heart:after {
 	top: .1em;
 	width: .5em;
-	height: .8em;
+	height: .782em;
 	border-radius: 50% 50% 0 0;
 }
 .css-icon-heart:before {
@@ -341,7 +341,7 @@
 	border-radius: .1em;
 }
 .css-icon-envelop:after {
-	top: .2em;
+	top: .15em;
 	width: 1em;
 	height: 0;
 	border-color: currentcolor transparent transparent transparent;
