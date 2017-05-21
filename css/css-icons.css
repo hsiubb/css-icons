@@ -144,6 +144,26 @@
 	border-width: 0 .2em .2em 0;
 }
 
+.css-icon-label:before {
+  top: .1em;
+	left: .2em;
+	width: .6em;
+	height: .9em;
+	border-width: 0 .1em .1em;
+	border-radius: .1em;
+	transform: rotate(45deg);
+}
+.css-icon-label:after {
+  content: '°';
+  line-height: .88;
+  top: .02em;
+  left: .56em;
+	width: .47em;
+	height: .47em;
+  border-width: .1em .1em 0 0;
+  border-radius: .1em;
+}
+
 .css-icon-card {
 	height: .8em;
 	margin: .1em 0;
@@ -174,26 +194,6 @@
 .css-icon-cart:before {
 }
 .css-icon-cart:after {
-}
-
-.css-icon-label:before {
-  top: .1em;
-	left: .2em;
-	width: .6em;
-	height: .9em;
-	border-width: 0 .1em .1em;
-	border-radius: .1em;
-	transform: rotate(45deg);
-}
-.css-icon-label:after {
-  content: '°';
-  line-height: .88;
-  top: .02em;
-  left: .56em;
-	width: .47em;
-	height: .47em;
-  border-width: .1em .1em 0 0;
-  border-radius: .1em;
 }
 
 .css-icon-search:before {
@@ -375,21 +375,22 @@
   -webkit-animation: loading 1s linear infinite;
   animation: loading 1s linear infinite;
 }
-.css-icon-loading-2 {
-	border-top: 2px solid currentcolor;
+.css-icon-loading-2:before {
+	height: 1em;
+	border-width: 2px 0 0 0;
   border-radius: 50%;
   -webkit-animation: loading 1s linear infinite;
   animation: loading 1s linear infinite;
 }
-.css-icon-loading-2:before {
+.css-icon-loading-2:after {
   top: .1em;
   left: .1em;
   width: .8em;
   height: .8em;
 	border-width: 2px 0 0 0;
   border-radius: 50%;
-  -webkit-animation: loading 1s linear infinite;
-  animation: loading 1s linear infinite;
+  -webkit-animation: loading .5s linear infinite;
+  animation: loading .5s linear infinite;
 }
 .css-icon-yinyang {
 	border: 1px solid currentcolor;
