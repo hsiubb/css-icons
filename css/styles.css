@@ -16,7 +16,7 @@ img {border: 0 none;}
 	padding: 30px 30px 30px 122px;
 	margin: auto;
 }
-.search-bar .icon-box {
+.search-bar .css-icon {
 	margin: 0;
 	margin-left: -92px;
 }
@@ -41,7 +41,7 @@ img {border: 0 none;}
 	padding-bottom: 10px;
 }
 
-.icon-box {
+.css-icon {
 	position: relative;
 	float: left;
 	margin: 10px 20px 30px;
