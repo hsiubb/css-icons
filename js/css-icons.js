@@ -1,5 +1,5 @@
 var iconCallBack = {};
-(function() {
+(function(iconCallBack) {
 	let css_icon = document.querySelectorAll('.css-icon');
 	for(let i=0; i<css_icon.length; i++) {
 	  let icon = css_icon[i].querySelector('[class*="css-icon-"]');
@@ -22,4 +22,4 @@ var iconCallBack = {};
 			}
 		});
 	}
-}();
+}(typeof iconCallBack !== 'undefined' ? iconCallBack : {}));
