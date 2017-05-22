@@ -5,8 +5,7 @@
 	<title>CSS Icons</title>
 	<link rel="stylesheet" href="css/css-icons.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/jq.js"></script>
-	<script src="js/css-icons.js"></script>
+	<!-- <script src="js/jq.js"></script> -->
 </head>
 <body>
 	<div class="search-bar clrfix">
@@ -14,6 +13,14 @@
 			<i id="css-icon" class="css-icon-search"></i>
 		</a>
 		<input id="input" class="icon-input" type="text" autocomplete="off" placeholder='请输入图标名称进行预览，如:"menu"' />
+	</div>
+
+	<div class="container guide">
+		<h2>Descriptions:</h2>
+		Icons behavior depend on it's HTML attribute,
+		<p>"data-icon" sets icons' next style, without this, the icon will not change its style.</p>
+		<p>"data-calbak" sets a jQuery method run after you click the icon, contains 3 parameters: event type, icon's HTML node, class suffix before click event, return false in the method will stop the change of icons.</p>
+		<p>PS: Icons lock, unlock, heart, love in this page all binded method $.iconCallBack["view"] which will output some text in the console.</p>
 	</div>
 
 	<div class="container clrfix">
@@ -220,21 +227,21 @@
 		<div class="clr"></div>
 
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-lock" data-icon="unlock" data-callback="view"></i>
+			<i class="css-icon-lock" data-icon="unlock" data-calbak="view"></i>
 			<span class="icon-name">lock</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-unlock" data-icon="lock" data-callback="view"></i>
+			<i class="css-icon-unlock" data-icon="lock" data-calbak="view"></i>
 			<span class="icon-name">unlock</span>
 		</a>
 		<div class="clr"></div>
 
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-heart" data-icon="love" data-callback="view"></i>
+			<i class="css-icon-heart" data-icon="love" data-calbak="view"></i>
 			<span class="icon-name">heart</span>
 		</a>
 		<a class="css-icon" href="javascript:;">
-			<i class="css-icon-love" data-icon="heart" data-callback="view"></i>
+			<i class="css-icon-love" data-icon="heart" data-calbak="view"></i>
 			<span class="icon-name">love</span>
 		</a>
 		<div class="clr"></div>
@@ -271,22 +278,45 @@
 		</a>
 	</div>
 
+	<script src="js/css-icons.js"></script>
 	<script>
-		(function($) {
-			$('#input').on('keyup', function(evnt) {
-				$('.viewing').removeClass('viewing');
-				var val = $(this).val().replace(/(^\s)($\s)/g,'');
-				$('#css-icon').prop('class','css-icon- css-icon-'+val);
-				$('.container .css-icon-'+val).closest('a').addClass('viewing');
-				if(val === '') {$('#css-icon').prop('class','css-icon-search');}
-			});
+			var viewing = document.querySelector('.viewing');
+			document.querySelector('#input').addEventListener('keyup', function(evnt) {
+				if(viewing) {
+					var new_class = viewing.getAttribute('class').replace(/viewing/g, '');
+					viewing.setAttribute('class', new_class);
+				}
 
-			$.iconCallBack['view'] = function(target, preclass, curcalss) {
-				console.log(target);
-				console.log('preclass:'+preclass);
-				console.log('curcalss:'+curcalss);
+				var val = String(this.value).replace(/(^\s*)|(\s*$)/g, '');
+				var search_icon = document.querySelector('#css-icon');
+				search_icon.setAttribute('class', 'css-icon-' + val);
+				var search_icon = document.querySelectorAll('.container .css-icon-' + val);
+				for(var i=0; i<search_icon.length; i++) {
+					var parent = search_icon[i].parentNode;
+					var parent_class = parent.getAttribute('class') + ' viewing';
+					parent.setAttribute('class', parent_class);
+				}
+				if(val === '') {
+					search_icon.setAttribute('class', 'css-icon-search');
+				}
+			});
+			// $('#input').on('keyup', function(evnt) {
+			// 	$('.viewing').removeClass('viewing');
+			// 	var val = $(this).val().replace(/(^\s)($\s)/g,'');
+			// 	$('#css-icon').prop('class','css-icon- css-icon-'+val);
+			// 	$('.container .css-icon-'+val).closest('a').addClass('viewing');
+			// 	if(val === '') {$('#css-icon').prop('class','css-icon-search');}
+			// });
+
+			iconCallBack['view'] = function(evnt, icon_node, icon_prev_class) {
+				console.log('event:');
+				console.log(evnt);
+				console.log('icon HTML node:');
+				console.log(icon_node);
+				console.log('node\'s previous class: "' + icon_prev_class + '"');
+
+				return true;
 			};
-		}(jQuery));
 	</script>
 </body>
 </html>

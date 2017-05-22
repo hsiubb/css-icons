@@ -36,6 +36,12 @@ img {border: 0 none;}
 	padding: 30px;
 	margin: auto;
 }
+.guide {
+	line-height: 2;
+}
+.guide p {
+	padding-left: 10px;
+}
 .title {
 	clear: left;
 	padding-bottom: 10px;
@@ -52,11 +58,7 @@ img {border: 0 none;}
 	border: 1px solid #ddd;
 	border-radius: .2em;
 }
-.css-icon:hover {
-	background: #fff;
-	/*border: 1px solid #eee;*/
-	/*box-shadow: inset -1px -1px 2px 1px #eee, 2px 2px 2px 1px #eee;*/
-}
+.css-icon:hover {background: #fff;}
 .css-icon:active {
 	top: 1px;
 	left: 1px;
@@ -76,4 +78,3 @@ img {border: 0 none;}
 	word-wrap: break-all;
 }
 .viewing {background: #09f;border-color: transparent;}
-/*.viewing [class*="css-icon-"] {color: #eee;}*/
