@@ -102,45 +102,38 @@
 
 .css-icon-attention:before {
 	top: 0;
-	left: .3em;
-	width: .4em;
-	height: .6em;
+	left: .43em;
+	width: .14em;
+	height: .7em;
 	border-color: currentcolor transparent transparent;
-	border-width: .6em .1em 0;
-	border-radius: 50% 50% 0 0;
-	/*top: 0;
-	left: .4em;
-	width: .2em;
-	height: .6em;
-	border-color: currentcolor transparent transparent;
-	border-width: .6em 0 0;
-	border-radius: .1em .1em 0 0;*/
+	border-width: .7em 0 0;
+	border-radius: .1em;
 }
 .css-icon-attention:after {
-	top: .49em;
-	left: .4em;
-	width: .2em;
-	height: .2em;
-	border-width: .1em;
+	top: .86em;
+	left: .43em;
+	width: .14em;
+	height: .14em;
+	border-width: .07em;
 	border-radius: 50%;
-	box-shadow: 0 .3em currentcolor;
 }
 
 .css-icon-question:before {
-	left: .2em;
-	width: .6em;
-	height: .6em;
+	top: .05em;
+	left: .23em;
+	width: .5em;
+	height: .5em;
 	border-color: currentcolor currentcolor currentcolor transparent;
 	border-width: .1em;
 	border-radius: .6em .6em .6em 0;
 	transform: rotate(-45deg);
 }
 .css-icon-question:after {
-	top: .8em;
-	left: .4em;
-	width: .2em;
-	height: .2em;
-	border-width: .1em;
+	top: .86em;
+	left: .43em;
+	width: .14em;
+	height: .14em;
+	border-width: .07em;
 	border-radius: 50%;
 }
 
