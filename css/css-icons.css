@@ -26,6 +26,18 @@
 }
 [class*="css-icon-"]:after {bottom: 0;}
 
+.css-icon-app:before {
+	top: 0;
+	left: .55em;
+	width: .45em;
+	height: .45em;
+	border-width: 4px;
+	border-radius: .1em;
+	box-shadow: -.55em 0 currentcolor, 0 .55em currentcolor, -.55em .55em currentcolor;
+}
+.css-icon-app:after {
+}
+
 .css-icon-grid:before {
 	top: 0;
 	height: .45em;
@@ -36,24 +48,6 @@
 	height: .45em;
 	border-width: 0 .45em;
 	border-radius: 0 0 .1em .1em;
-}
-
-.css-icon-app:before {
-	top: 0;
-	width: .45em;
-	height: .45em;
-	border-width: .1em;
-	border-radius: .1em;
-	box-shadow: .55em 0 currentcolor, 0 .55em currentcolor, .55em .55em currentcolor;
-}
-.css-icon-app:after {
-	top: .65em;
-	left: .1em;
-	width: .25em;
-	height: .25em;
-	color: #fff;
-	background: currentcolor;
-	box-shadow: .55em 0 currentcolor, 0 -.55em currentcolor, .55em -.55em currentcolor;
 }
 
 .css-icon-menu:before {
@@ -172,35 +166,30 @@
 
 .css-icon-user:before {
 	top: 0;
+	left: .28em;
+	width: .44em;
+	border-width: .22em;
+	border-radius: 50%;
+}
+.css-icon-user:after {
+	left: .05em;
+	width: .9em;
+	height: .45em;
+	border-width: 0 .45em;
+	border-radius: .5em .5em 0 0;
+}
+
+.css-icon-avatar:before {
+	top: 0;
 	left: .25em;
 	width: .5em;
 	border-width: .25em;
 	border-radius: 50%;
 }
-.css-icon-user:after {
+.css-icon-avatar:after {
 	height: .5em;
 	border-width: .4em 0 0;
 	border-radius: .5em .5em 0 0;
-}
-
-.css-icon-label:before {
-  top: .1em;
-	left: .2em;
-	width: .6em;
-	height: .9em;
-	border-width: 0 .1em .1em;
-	border-radius: .1em;
-	transform: rotate(45deg);
-}
-.css-icon-label:after {
-  content: '°';
-  line-height: .88;
-  top: .02em;
-  left: .56em;
-	width: .47em;
-	height: .47em;
-  border-width: .1em .1em 0 0;
-  border-radius: .1em;
 }
 
 .css-icon-card {
@@ -213,14 +202,6 @@
 	width: .8em;
 	top: .1em;
 	border-width: 0 0 .2em;
-	/*content: '..';*/
-	/*letter-spacing: -.1em;
-	line-height: .3em;
-	text-align: left;
-	top: .1em;
-	height: .8em;
-	border-width: .1em;
-	border-radius: .1em;*/
 }
 .css-icon-card:after {
 	left: .1em;
@@ -230,9 +211,19 @@
 	border-width: 0 .1em;
 }
 
-.css-icon-cart:before {
+.css-icon-position:before {
+	left: .15em;
+	width: .7em;
+	height: .7em;
+	border-width: .2em;
+	border-radius: 50%;
 }
-.css-icon-cart:after {
+.css-icon-position:after {
+	left: .2em;
+	top: .52em;
+	width: .6em;
+	border-width: .5em .3em 0;
+	border-color: currentcolor transparent transparent transparent;
 }
 
 .css-icon-search:before {
@@ -250,19 +241,48 @@
   transform: rotate(45deg);
 }
 
-.css-icon-position:before {
-	left: .15em;
-	width: .7em;
-	height: .7em;
-	border-width: .2em;
+.css-icon-chat:before {
+	top: .1em;
+	left: .05em;
+	width: .9em;
+	height: .6em;
+	border-width: 0 .45em;
 	border-radius: 50%;
 }
-.css-icon-position:after {
-	left: .2em;
-	top: .52em;
-	width: .6em;
-	border-width: .5em .3em 0;
-	border-color: currentcolor transparent transparent transparent;
+.css-icon-chat:after {
+	top: .35em;
+	left: .05em;
+	width: .5em;
+	height: .5em;
+	border-color: transparent currentcolor transparent transparent;
+	border-width: 0 .25em 0 0;
+	border-radius: 0 0 .4em;
+}
+
+.css-icon-bubble:before {
+	top: .1em;
+	left: .05em;
+	width: .9em;
+	height: .6em;
+	border-width: 0 .45em;
+	border-radius: .15em;
+}
+.css-icon-bubble:after {
+	top: .4em;
+	left: .05em;
+	width: .5em;
+	height: .5em;
+	border-color: transparent currentcolor transparent transparent;
+	border-width: 0 .25em 0 0;
+	border-radius: 0 0 .4em;
+}
+
+
+.css-icon-cart {
+}
+.css-icon-cart:before {
+}
+.css-icon-cart:after {
 }
 
 
@@ -349,6 +369,25 @@
 	border-radius: .1em;
 }
 
+.css-icon-arrowkey:before {
+	top: .25em;
+	left: .35em;
+	width: .3em;
+	height: .3em;
+	background: currentcolor;
+	border-radius: .05em;
+	box-shadow: 0 .35em currentcolor, -.35em .35em currentcolor, .35em .35em currentcolor;
+}
+.css-icon-arrowkey:after {
+	top: .35em;
+	left: .42em;
+	width: 0;
+	height: 0;
+	border-right: .08em solid transparent;
+	border-bottom: .1em solid #fff;
+	border-left: .08em solid transparent;
+}
+
 .css-icon-mobile:before {
 	left: .2em;
 	width: .6em;
@@ -360,7 +399,7 @@
 }
 .css-icon-mobile:after {
 	top: 0;
-	left: .24em;
+	left: .3em;
 	width: .08em;
 	height: .08em;
 	border-color: transparent;
@@ -368,7 +407,7 @@
 	border-radius: .3em;
 	background: #fff;
 	background-clip: padding-box;
-	box-shadow: .22em .89em #fff;
+	box-shadow: .16em .89em #fff;
 }
 
 .css-icon-file:before {
