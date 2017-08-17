@@ -940,13 +940,30 @@
 
 .css-icon-knife:before {
 	top: 0;
+	left: .35em;
+	width: .3em;
+	height: .8em;
+	background: currentcolor;
+	border-radius: 100% 0 0;
+}
+.css-icon-knife:after {
+	top: .7em;
+	left: .55em;
+	width: .1em;
+	height: .3em;
+	background: currentcolor;
+	border-radius: .1em;
+}
+
+.css-icon-kitchen-knife:before {
+	top: 0;
 	left: .25em;
 	width: .5em;
 	height: .7em;
 	background: currentcolor;
 	border-radius: .04em .06em 0 .04em;
 }
-.css-icon-knife:after {
+.css-icon-kitchen-knife:after {
 	top: .6em;
 	left: .6em;
 	width: .15em;
