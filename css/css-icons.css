@@ -1,3 +1,12 @@
+/*.css-icon:before {
+	content: '\0020';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	border-left: 1px dashed #ddd;
+}*/
+
 [class*="css-icon-"] {
 	position: relative;
 	display: block;
@@ -19,7 +28,7 @@
 	display: block;
 	width: 1em;
 	border-style: solid;
-	border-color: currentcolor;
+	border-color: currentColor;
 	border-width: 0;
 	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
@@ -33,7 +42,7 @@
 	height: .45em;
 	border-width: 4px;
 	border-radius: .1em;
-	box-shadow: -.55em 0 currentcolor, 0 .55em currentcolor, -.55em .55em currentcolor;
+	box-shadow: -.55em 0 currentColor, 0 .55em currentColor, -.55em .55em currentColor;
 }
 .css-icon-app:after {
 }
@@ -99,7 +108,7 @@
 	left: .43em;
 	width: .14em;
 	height: .7em;
-	border-color: currentcolor transparent transparent;
+	border-color: currentColor transparent transparent;
 	border-width: .7em 0 0;
 	border-radius: .1em;
 }
@@ -117,7 +126,7 @@
 	left: .23em;
 	width: .5em;
 	height: .5em;
-	border-color: currentcolor currentcolor currentcolor transparent;
+	border-color: currentColor currentColor currentColor transparent;
 	border-width: .1em;
 	border-radius: .6em .6em .6em 0;
 	transform: rotate(-45deg);
@@ -145,14 +154,14 @@
 	bottom: .1em;
 	left: .07em;
 	width: .2em;
-	border-color: transparent transparent currentcolor transparent;
+	border-color: transparent transparent currentColor transparent;
 	border-width: 0 .2em .2em 0;
 }
 
 
 .css-icon-home:before {
 	top: 0;
-	border-color: transparent transparent currentcolor;
+	border-color: transparent transparent currentColor;
 	border-width: 0 .5em .55em;
 }
 .css-icon-home:after {
@@ -160,7 +169,7 @@
 	left: .05em;
 	width: .9em;
 	height: .5em;
-	border: solid currentcolor;
+	border: solid currentColor;
 	border-width: .2em .39em 0;
 }
 
@@ -195,7 +204,7 @@
 .css-icon-card {
 	height: .8em;
 	margin: .1em 0;
-	border: .1em solid currentcolor;
+	border: .1em solid currentColor;
 	border-radius: .1em;
 }
 .css-icon-card:before {
@@ -223,7 +232,7 @@
 	top: .52em;
 	width: .6em;
 	border-width: .5em .3em 0;
-	border-color: currentcolor transparent transparent transparent;
+	border-color: currentColor transparent transparent transparent;
 }
 
 .css-icon-search:before {
@@ -254,7 +263,7 @@
 	left: .05em;
 	width: .5em;
 	height: .5em;
-	border-color: transparent currentcolor transparent transparent;
+	border-color: transparent currentColor transparent transparent;
 	border-width: 0 .25em 0 0;
 	border-radius: 0 0 .4em;
 }
@@ -272,7 +281,7 @@
 	left: .05em;
 	width: .5em;
 	height: .5em;
-	border-color: transparent currentcolor transparent transparent;
+	border-color: transparent currentColor transparent transparent;
 	border-width: 0 .25em 0 0;
 	border-radius: 0 0 .4em;
 }
@@ -350,7 +359,7 @@
 .css-icon-laptop:after {
 	bottom: .15em;
 	border-width: 0 .1em .15em;
-	border-color: transparent transparent currentcolor;
+	border-color: transparent transparent currentColor;
 	border-radius: .1em;
 }
 
@@ -365,7 +374,7 @@
 	bottom: .1em;
 	width: .4em;
 	border-width: 0 .1em .15em;
-	border-color: transparent transparent currentcolor;
+	border-color: transparent transparent currentColor;
 	border-radius: .1em;
 }
 
@@ -374,9 +383,9 @@
 	left: .35em;
 	width: .3em;
 	height: .3em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .05em;
-	box-shadow: 0 .35em currentcolor, -.35em .35em currentcolor, .35em .35em currentcolor;
+	box-shadow: 0 .35em currentColor, -.35em .35em currentColor, .35em .35em currentColor;
 }
 .css-icon-arrowkey:after {
 	top: .35em;
@@ -392,7 +401,7 @@
 	left: .2em;
 	width: .6em;
 	height: 1em;
-	border-color: currentcolor;
+	border-color: currentColor;
 	border-style: solid;
 	border-width: .08em 3px .14em 3px;
 	border-radius: .1em;
@@ -427,7 +436,7 @@
 }
 
 .css-icon-picture {
-	border: 2px solid currentcolor;
+	border: .05em solid currentColor;
 	border-radius: .1em;
 	overflow: hidden;
 }
@@ -435,7 +444,7 @@
 	top: .5em;
 	left: .2em;
 	height: 1em;
-	border-width: 2px 0 0 2px;
+	border-width: .05em 0 0 .05em;
 	border-radius: 3px;
 	transform: rotate(40deg);
 }
@@ -444,7 +453,7 @@
 	left: .2em;
 	width: .2em;
 	height: .2em;
-	border-width: 2px;
+	border-width: .05em;
 	border-radius: 50%;
 }
 
@@ -460,7 +469,6 @@
 	height: .4em;
 	border-width: .1em;
 	border-radius: .2em .1em 0 .2em;
-	/*box-shadow: inset 0 .08em rgba(0, 0, 0, .1);*/
 	background: #eee;
 }
 
@@ -474,7 +482,7 @@
 	top: .15em;
 	width: 1em;
 	height: 0;
-	border-color: currentcolor transparent transparent transparent;
+	border-color: currentColor transparent transparent transparent;
 	border-width: .3em .48em 0;
 	border-radius: .1em .1em 50% 50%;
 }
@@ -486,7 +494,7 @@
 	height: .1em;
 	border-width: 0 .15em 0;
 	box-shadow: 0 .08em, -.2em .08em, .2em .08em, 0 .5em, 0 .3em;
-	border-radius: 2px;
+	border-radius: .05em;
 }
 .css-icon-trash:after {
 	left: .2em;
@@ -499,7 +507,7 @@
 
 .css-icon-clock {
 	height: 1em;
-	border: .05em solid currentcolor;
+	border: .05em solid currentColor;
 	border-radius: 50%;
 }
 .css-icon-clock:before {
@@ -519,8 +527,6 @@
 }
 
 
-
-
 @keyframes loading {
   0 {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
@@ -531,15 +537,15 @@
   width: .8em;
   height: .8em;
 	border-style: dashed;
-  border-width: 1px;
-  border-top: 1px solid currentcolor;
+  border-width: .02em;
+  border-top: .02em solid currentColor;
   border-radius: 50%;
   -webkit-animation: loading 1s linear infinite;
   animation: loading 1s linear infinite;
 }
 .css-icon-loading-2:before {
 	height: 1em;
-	border-width: 2px 0 0 0;
+	border-width: .02em 0 0 0;
   border-radius: 50%;
   -webkit-animation: loading 1s linear infinite;
   animation: loading 1s linear infinite;
@@ -549,35 +555,37 @@
   left: .1em;
   width: .8em;
   height: .8em;
-	border-width: 2px 0 0 0;
+	border-width: .02em 0 0 0;
   border-radius: 50%;
   -webkit-animation: loading .5s linear infinite;
   animation: loading .5s linear infinite;
 }
 .css-icon-yinyang {
-	border: 1px solid currentcolor;
-	border-bottom: .5em solid currentcolor;
+	border: 1px solid currentColor;
+	border-bottom: .5em solid currentColor;
 	border-radius: 50%;
 	background: #fff;
-  -webkit-animation: loading 1s linear infinite;
-  animation: loading 1s linear infinite;
+  -webkit-animation: loading .6s linear infinite;
+  animation: loading .6s linear infinite;
 }
 .css-icon-yinyang:before,
 .css-icon-yinyang:after {
 	top: .25em;
-	width: .48em;
-	height: .48em;
+	width: .499em;
+	height: .499em;
 	border-width: .2em;
 	border-radius: .5em;
 }
 .css-icon-yinyang:before {
 	left: 0;
 	right: 50%;
+	background: #fff;
 }
 .css-icon-yinyang:after {
 	left: 50%;
 	right: 0;
 	border-color: #fff;
+	background: currentColor;
 }
 
 [class*="css-icon-battery"]:before,
@@ -596,15 +604,15 @@
 	height: .3em;
 	border-width: 0 .05em 0 .05em;
 }
-.css-icon-battery-full:after {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 currentcolor, -.3em 0 1px 0 currentcolor;}
-.css-icon-battery:after {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor;}
+.css-icon-battery-full:after {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor, -.45em 0 1px 0 currentColor, -.3em 0 1px 0 currentColor;}
+.css-icon-battery:after {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor;}
 @keyframes charge {
 	0 {box-shadow: -.75em 0 1px 0 transparent, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
-	30% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
-	50% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
-	70% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 currentcolor, -.3em 0 1px 0 transparent;}
-	90% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 currentcolor, -.3em 0 1px 0 currentcolor;}
-	100% {box-shadow: -.75em 0 1px 0 currentcolor, -.6em 0 1px 0 currentcolor, -.45em 0 1px 0 currentcolor, -.3em 0 1px 0 currentcolor;}
+	30% {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
+	50% {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
+	70% {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor, -.45em 0 1px 0 currentColor, -.3em 0 1px 0 transparent;}
+	90% {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor, -.45em 0 1px 0 currentColor, -.3em 0 1px 0 currentColor;}
+	100% {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor, -.45em 0 1px 0 currentColor, -.3em 0 1px 0 currentColor;}
 }
 .css-icon-charging:after {
 	box-shadow: -.75em 0 1px 0 transparent, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;
@@ -630,7 +638,18 @@
 	border-color: transparent;
 	border-width: .05em;
 	border-radius: .2em;
-	box-shadow: 0 -.6em currentcolor, -.6em 0 currentcolor, 0 .6em currentcolor, .6em 0 currentcolor, .4em .4em currentcolor, .4em -.4em currentcolor, -.4em -.4em currentcolor, -.4em .4em currentcolor;
+	box-shadow: 0 -.6em currentColor, -.6em 0 currentColor, 0 .6em currentColor, .6em 0 currentColor, .4em .4em currentColor, .4em -.4em currentColor, -.4em -.4em currentColor, -.4em .4em currentColor;
+}
+
+.css-icon-moon:before {
+	width: .8em;
+	height: .8em;
+	top: -.1em;
+	left: .45em;
+	box-shadow: -.3em .2em currentColor;
+	border-radius: 50%;
+}
+.css-icon-moon:after {
 }
 
 .css-icon-rainy:before {
@@ -647,26 +666,29 @@
 	width: .2em;
 	border-color: transparent;
 	border-width: 2px 0 0;
-	box-shadow: -.2em 0 currentcolor, .2em 0 currentcolor, 0 -.2em currentcolor, 0 .2em currentcolor;
+	box-shadow: -.2em 0 currentColor, .2em 0 currentColor, 0 -.2em currentColor, 0 .2em currentColor;
 	transform: rotate(45deg);
 }
 
 .css-icon-cloudy:before {
 	top: .25em;
 	left: .05em;
-	width: .7em;
+	width: .65em;
 	height: .5em;
-	border-width: 2px 0 2px 2px;
+	border-color:  currentColor;
+	border-width: .02em 0 .02em .02em;
 	border-radius: .3em .3em 0 .2em;
-	box-shadow: -1px -1px 2px 2px rgba(0, 0, 0, .1);
+	box-shadow: -.02em -.02em .02em .02em rgba(0, 0, 0, .1);
 }
 .css-icon-cloudy:after {
 	top: .35em;
 	left: .7em;
 	width: .3em;
 	height: .4em;
-	border-width: 2px 2px 2px 0;
+	border-color:  currentColor;
+	border-width: .02em .02em .02em 0;
 	border-radius: .1em 50% .2em 0;
+	box-shadow: .02em -.02em .02em .02em rgba(0, 0, 0, .1);
 }
 
 .css-icon-windy:before {
@@ -675,13 +697,12 @@
 	height: .4em;
 	border-width: 2px 2px 2px 0;
 	border-radius: 50% 50% 50% 0;
-	/*box-shadow: .2em .1em currentcolor;*/
 }
 .css-icon-windy:after {
 	bottom: .6em;
 	width: .4em;
 	border-width: 2px 0 0;
-	box-shadow: .3em .1em currentcolor, 0 .1em currentcolor;
+	box-shadow: .3em .1em currentColor, 0 .1em currentColor;
 }
 
 .css-icon-play:before,
@@ -693,7 +714,7 @@
 	left: 0;
 	width: .5em;
 	height: .6em;
-	border-color: transparent transparent transparent currentcolor;
+	border-color: transparent transparent transparent currentColor;
 	border-width: .3em 0 .3em .5em;
 }
 .css-icon-play:before {left: .25em;}
@@ -713,7 +734,7 @@
 .css-icon-forward:after {left: .5em;}
 .css-icon-forward:before,
 .css-icon-forward:after {
-	border-color: transparent currentcolor transparent transparent;
+	border-color: transparent currentColor transparent transparent;
 	border-width: .3em .5em .3em 0;
 }
 
@@ -731,7 +752,7 @@
 	left: 0;
 	width: .2em;
 	height: .3em;
-	border-color: transparent currentcolor transparent transparent;
+	border-color: transparent currentColor transparent transparent;
 	border-width: .15em .2em .15em 0;
 }
 
@@ -748,7 +769,7 @@
 	left: .8em;
 	width: .2em;
 	height: .3em;
-	border-color: transparent transparent transparent currentcolor;
+	border-color: transparent transparent transparent currentColor;
 	border-width: .15em 0 .15em .2em;
 }
 
@@ -854,16 +875,16 @@
 	left: .35em;
 	width: .3em;
 	height: .1em;
-	background: currentcolor;
-	border-radius: .5em .5em .1em .1em;
+	background: currentColor;
+	border-radius: .1em .1em .5em .5em;
 }
 .css-icon-sword:after {
 	top: 0;
 	left: .44em;
 	width: .12em;
 	height: 1em;
-	background: currentcolor;
-	border-radius: 100% 100% .1em .1em;
+	background: currentColor;
+	border-radius: 100% 100% .12em .12em;
 }
 
 .css-icon-katana:before {
@@ -871,7 +892,7 @@
 	left: .23em;
 	width: .5em;
 	height: .1em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: 1em .1em;
 }
 .css-icon-katana:after {
@@ -879,7 +900,7 @@
 	left: .4em;
 	width: .16em;
 	height: 1em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .5em .1em .2em .2em / 1em .1em .2em .2em;
 }
 
@@ -889,7 +910,7 @@
 	width: 0;
 	height: .6em;
 	border-width: .3em 0 .3em .6em;
-	border-color: transparent transparent transparent currentcolor;
+	border-color: transparent transparent transparent currentColor;
 	border-radius: .6em 0 0 .6em / 0.4em;
 }
 .css-icon-axe:after {
@@ -897,7 +918,7 @@
 	left: .55em;
 	width: .1em;
 	height: .9em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .1em;
 }
 
@@ -908,8 +929,8 @@
 	height: .7em;
 	border-top: .25em solid transparent;
 	border-bottom: .25em solid transparent;
-	border-right: .35em solid currentcolor;
-	border-left: .35em solid currentcolor;
+	border-right: .35em solid currentColor;
+	border-left: .35em solid currentColor;
 	border-radius: 50%;
 }
 .css-icon-double-bit-axe:after {
@@ -917,7 +938,7 @@
 	left: .45em;
 	width: .1em;
 	height: .8em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .1em;
 }
 
@@ -926,7 +947,7 @@
 	left: .15em;
 	width: .7em;
 	height: .4em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .05em;
 }
 .css-icon-hammer:after {
@@ -934,7 +955,7 @@
 	left: .45em;
 	width: .1em;
 	height: .6em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .1em;
 }
 
@@ -943,7 +964,7 @@
 	left: .35em;
 	width: .3em;
 	height: .8em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: 100% 0 0;
 }
 .css-icon-knife:after {
@@ -951,7 +972,7 @@
 	left: .55em;
 	width: .1em;
 	height: .3em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .1em;
 }
 
@@ -960,7 +981,7 @@
 	left: .25em;
 	width: .5em;
 	height: .7em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .04em .06em 0 .04em;
 }
 .css-icon-kitchen-knife:after {
@@ -968,7 +989,7 @@
 	left: .6em;
 	width: .15em;
 	height: .4em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .06em 0 .1em .1em;
 }
 
@@ -977,7 +998,7 @@
 	left: .3em;
 	width: .4em;
 	height: .6em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .3em .3em .1em .1em;
 }
 .css-icon-armor:after {
@@ -985,9 +1006,9 @@
 	left: .2em;
 	width: .2em;
 	height: .2em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .1em .1em .05em .05em;
-	box-shadow: .4em 0 currentcolor;
+	box-shadow: .4em 0 currentColor;
 }
 
 .css-icon-shield:before {
@@ -995,7 +1016,7 @@
 	left: .38em;
 	width: .5em;
 	height: .5em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: 0 0 100% 0;
 	transform: rotate(-24deg);
 }
@@ -1004,9 +1025,29 @@
 	left: .13em;
 	width: .5em;
 	height: .5em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: 0 0 0 100%;
 	transform: rotate(24deg);
+}
+
+.css-icon-shield2:before {
+	top: .05em;
+	left: .35em;
+	width: .3em;
+	height: .3em;
+	border-color: transparent currentColor currentColor transparent;
+	border-width: 1px;
+	border-radius: 0 0 100%;
+	transform: rotate(45deg);
+}
+.css-icon-shield2:after {
+	top: .1em;
+	left: .2em;
+	width: .6em;
+	height: .6em;
+	border-width: 0 1px 1px 0;
+	border-radius: 0 50%;
+	transform: rotate(45deg);
 }
 
 .css-icon-boot:before {
@@ -1014,21 +1055,42 @@
 	left: .52em;
 	width: .35em;
 	height: .2em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .05em;
-	box-shadow: .06em 0 currentcolor,
-	.03em .1em currentcolor,
-	.03em .2em currentcolor,
-	.03em .45em currentcolor,
-	.04em .5em currentcolor;
+	box-shadow: .06em 0 currentColor,
+	.03em .1em currentColor,
+	.03em .2em currentColor,
+	.03em .45em currentColor,
+	.04em .5em currentColor;
 }
 .css-icon-boot:after {
 	top: .5em;
 	left: .1em;
 	width: .8em;
 	height: .35em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: 100% 0 100% .1em;
+}
+
+.css-icon-target {
+	background: currentColor;
+	border-radius: 50%;
+}
+.css-icon-target:before {
+	top: .15em;
+	left: .15em;
+	width: .7em;
+	height: .7em;
+	background: #fff;
+	border-radius: 50%;
+}
+.css-icon-target:after {
+	top: .3em;
+	left: .3em;
+	width: .4em;
+	height: .4em;
+	border: .13em solid currentColor;
+	border-radius: 50%;
 }
 
 .css-icon-sack:before {
@@ -1036,7 +1098,7 @@
 	left: .3em;
 	width: .4em;
 	height: .3em;
-	border-top: .3em solid currentcolor;
+	border-top: .3em solid currentColor;
 	border-left: .2em solid transparent;
 	border-right: .2em solid transparent;
 	border-radius: .2em .1em 0 0;
@@ -1046,7 +1108,7 @@
 	left: .2em;
 	width: .6em;
 	height: .6em;
-	background: currentcolor;
+	background: currentColor;
 	border-radius: .6em .6em .2em .2em;
 }
 
@@ -1054,29 +1116,29 @@
 	left: .4em;
 	width: .05em;
 	height: .1em;
-	background: currentcolor;
+	background: currentColor;
 	box-shadow:
-		 .05em 0     currentcolor,
-		  .1em 0     currentcolor,
-		 .15em 0     currentcolor,
-		-.04em .05em currentcolor,
-		     0 .05em currentcolor,
-		 .04em .05em currentcolor,
-		 .08em .05em currentcolor,
-		 .12em .05em currentcolor,
-		 .16em .05em currentcolor,
-		  .2em .05em currentcolor,
-		   0em .1em  currentcolor,
-		 .16em .1em  currentcolor,
-		   0em .15em currentcolor,
-		 .16em .15em currentcolor;
+		 .05em 0     currentColor,
+		  .1em 0     currentColor,
+		 .15em 0     currentColor,
+		-.04em .05em currentColor,
+		     0 .05em currentColor,
+		 .04em .05em currentColor,
+		 .08em .05em currentColor,
+		 .12em .05em currentColor,
+		 .16em .05em currentColor,
+		  .2em .05em currentColor,
+		   0em .1em  currentColor,
+		 .16em .1em  currentColor,
+		   0em .15em currentColor,
+		 .16em .15em currentColor;
 }
 [class*="css-icon-potions-"]:after {
 	top: auto;
 	bottom: .1em;
 	left: .3em;
 	width: .4em;
-	border: .05em solid currentcolor;
+	border: .05em solid currentColor;
 	border-radius: .5em .5em .4em .4em;
 }
 .css-icon-potions-lg:before {top: .1em;}
@@ -1098,7 +1160,7 @@
 	top: .23em;
   left: .4em;
   width: .2em;
-  border-top: .15em solid currentcolor;
+  border-top: .15em solid currentColor;
   border-left: .04em solid transparent;
   border-right: .04em solid transparent;
   border-radius: .04em;
@@ -1108,6 +1170,150 @@
 	left: .4em;
 	width: .2em;
 	height: .6em;
-	border: .05em solid currentcolor;
+	border: .05em solid currentColor;
 	border-radius: 0 0 .2em .2em;
+}
+
+.css-icon-aircraft:before {
+	top: .05em;
+	left: .27em;
+	width: .45em;
+	height: 1em;
+	border-left: .3em solid currentColor;
+	border-top: .7em solid transparent;
+	border-bottom: .35em solid transparent;
+	transform: rotateZ(23deg);
+}
+.css-icon-aircraft:after {
+	top: .05em;
+	left: .27em;
+	width: .45em;
+	height: 1em;
+	border-right: .3em solid currentColor;
+	border-top: .7em solid transparent;
+	border-bottom: .35em solid transparent;
+	transform: rotateZ(-23deg);
+}
+
+.css-icon-fighter:before {
+	top: .3em;
+  left: .24em;
+  width: 0;
+	height: 0;
+  border-top: .6em solid currentColor;
+  border-right: .3em solid transparent;
+  transform: rotateZ(47deg);
+}
+.css-icon-fighter:after {
+	top: .3em;
+	left: 0.47em;
+	width: 0;
+	height: 0;
+	border-top: .6em solid currentColor;
+	border-left: .3em solid transparent;
+	transform: rotateZ(-47deg);
+}
+
+.css-icon-tank:before {
+	top: .45em;
+	left: .35em;
+	width: .3em;
+	height: .3em;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow:
+		0 0 0 .2em currentColor,
+		.2em .2em currentColor,
+		-.2em .2em currentColor,
+		.2em -.2em currentColor,
+		-.2em -.2em currentColor;
+}
+.css-icon-tank:after {
+	top: .05em;
+	left: .42em;
+	width: .16em;
+	height: .6em;
+	background: currentColor;
+	border-radius: .05em;
+}
+
+.css-icon-tank2:before {
+	top: .45em;
+	left: .35em;
+	width: .3em;
+	height: .3em;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow:
+		0 0 0 .15em currentColor,
+		.15em .2em currentColor,
+		-.15em .2em currentColor,
+		.15em -.2em currentColor,
+		-.15em -.2em currentColor;
+}
+.css-icon-tank2:after {
+	top: .05em;
+	left: .425em;
+	width: .15em;
+	height: .6em;
+	background: currentColor;
+	border-radius: .05em;
+	box-shadow:
+		-.22em .2em currentColor,
+		.22em .2em currentColor,
+		-.22em .3em currentColor,
+		.22em .3em currentColor;
+}
+
+
+.css-icon-tank3:before {
+	top: .45em;
+	left: .35em;
+	width: .3em;
+	height: .3em;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow:
+		0 0 0 .15em currentColor,
+		.15em .2em currentColor,
+		-.15em .2em currentColor,
+		.15em -.2em currentColor,
+		-.15em -.2em currentColor;
+}
+.css-icon-tank3:after {
+	top: .05em;
+	left: .425em;
+	width: .15em;
+	height: .6em;
+	background: currentColor;
+	border-radius: .05em;
+	box-shadow:
+		-.25em .2em currentColor,
+		.25em .2em currentColor,
+		-.25em .3em currentColor,
+		.25em .3em currentColor;
+}
+
+
+.css-icon-tank4:before {
+	top: .4em;
+	left: .3em;
+	width: .4em;
+	height: .4em;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow:
+		0 0 0 .2em currentColor,
+		.2em .2em currentColor,
+		-.2em .2em currentColor,
+		.2em -.2em currentColor,
+		-.2em -.2em currentColor;
+}
+.css-icon-tank4:after {
+	top: 0;
+	left: .4em;
+	width: .2em;
+	height: .7em;
+	background: currentColor;
+	border-radius: .05em .05em .1em .1em;
 }
