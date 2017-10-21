@@ -51,8 +51,8 @@ let css_icon_vm = new Vue({
 		'guide': {
 			template: `
 				<div class="container guide">
-					<h2>Descriptions:</h2>
-					Icons behavior depend on it's HTML attribute,
+					<h2 class="title">Descriptions:</h2>
+					Icons' behavior depend on it's HTML attribute,
 					<p v-for="line in lines">{{line}}</p>
 				</div>
 			`,

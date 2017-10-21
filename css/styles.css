@@ -32,6 +32,10 @@ img {border: 0 none;}
 }
 
 .container {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-wrap: wrap;
 	max-width: 1200px;
 	padding: 30px;
 	margin: auto;
@@ -40,11 +44,16 @@ img {border: 0 none;}
 	line-height: 2;
 }
 .guide p {
+	width: 100%;
 	padding-left: 10px;
 }
 .title {
+	width: 100%;
 	clear: left;
 	padding-bottom: 10px;
+}
+.container .clr {
+	width: 100%;
 }
 
 .css-icon {
