@@ -59,8 +59,9 @@ let css_icon_vm = new Vue({
 			data: function() {
 				return {
 					lines: [
-						`<css-icon> has two props, ':icon-name' and ':group'. one for display, the other one is the name of icons group, which the icon will turn it's class to when being click.`,
-						`click again will turn icons class to default.`
+						`<css-icon> has two properties, ':icon-name' and ':group'. `,
+						`The first one is related to its display, while the other one is the name of icons group, which the icon will turn it's class to when being click.`,
+						` Click again will turn icons class to default.`
 					]
 				}
 			}
