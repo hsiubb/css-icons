@@ -7,7 +7,7 @@ img {border: 0 none;}
 
 .fl {float: left; _display: inline;}
 .fr {float: right; _display: inline;}
-.clr {clear: both; height: 0; margin-bottom: 40px; overflow: hidden;}
+.clr {clear: both; height: 0; margin-bottom: 60px; overflow: hidden;}
 .clrfix {*zoom: 1;}
 .clrfix:before, .clrfix:after {content: '\0020';display: block;height: 0;clear: both;visibility: hidden;}
 
@@ -66,6 +66,16 @@ img {border: 0 none;}
 	background: #eee;
 	border: 1px solid #ddd;
 	border-radius: .2em;
+}
+.css-group {
+	width: 100%;
+	margin-top: 0;
+	text-align: left;
+	background: transparent;
+	border: 1px solid transparent;
+}
+.css-group .icon-name {
+	width: 100px;
 }
 .css-icon:hover {background: #fff;}
 .css-icon:active {

@@ -3,27 +3,53 @@ let css_icon_vm = new Vue({
 	data: {
 		elementsTitle: 'Elements',
 		groupsTitle: 'Groups',
-		iconsList: ['app', 'grid', 'menu', 'close', 'tick', 'attention', 'question', 'pencil', 'user', 'avatar', 'home', 'card', 'position', 'search', 'chat', 'bubble', 'drop', 'focus', 'laptop', 'monitor', 'arrowkey', 'mobile', 'file', 'picture', 'book', 'envelop', 'trash', 'clock'],
 		groupList: [
-			['loading-1', 'loading-2', 'yinyang'],
-			['battery-full', 'battery', 'battery-low'],
-			['sunny', 'moon', 'rainy', 'cloudy'],
-			['play', 'pause', 'stop', 'record', 'rewind', 'forward'],
-			['prev', 'next'],
-			['arrow-top', 'arrow-right', 'arrow-bottom', 'arrow-left'],
-			['angle-top', 'angle-right', 'angle-bottom', 'angle-left'],
-			['lock', 'unlock'],
-			['heart', 'love'],
-			['checkbox', 'checkbox-checked', 'radio', 'radio-checked'],
-			['plus', 'minus', 'plus-minus'],
-			['sword', 'katana', 'axe', 'double-bit-axe', 'hammer', 'knife', 'kitchen-knife', 'armor', 'shield', 'shield2', 'boot', 'target'],
-			['sack', 'potions-lg', 'potions-md', 'potions-sm', 'syrup'],
-			['aircraft', 'fighter', 'tank', 'tank2', 'tank3', 'tank4']
-		],
-		lines: [
-			`"data-icon" sets icons' next style, without this, the icon will not change its style when you click it.`,
-			`"data-calbak" set functions which run after you click the icon, contains 3 parameters: event type, icon's HTML node, class suffix before click event, return false in the function will stop the change of icons.`,
-			`PS: Icons lock, unlock, heart, love in this page all binded function iconCallBack["view"] which will output some text in the console.`
+			{
+				title: 'ELEMENTS',
+				list: ['app', 'grid', 'menu', 'close', 'tick', 'attention', 'question', 'pencil', 'user', 'avatar', 'home', 'position', 'search', 'chat', 'bubble', 'drop', 'focus', 'laptop', 'monitor', 'arrowkey', 'mobile', 'file', 'picture', 'book', 'envelop', 'trash', 'clock']
+			}, {
+				title: 'LOADING',
+				list: ['loading-1', 'loading-2', 'yinyang']
+			}, {
+				title: 'BATTERY',
+				list: ['battery-full', 'battery', 'battery-mid', 'battery-low', 'battery-dead']
+			}, {
+				title: 'WEATHER',
+				list: ['sunny', 'moon', 'rainy', 'cloudy']
+			}, {
+				title: 'AUDIO',
+				list: ['play', 'pause', 'stop', 'record', 'rewind', 'forward']
+			}, {
+				title: 'RELATE',
+				list: ['prev', 'next']
+			}, {
+				title: 'ARROW',
+				list: ['arrow-top', 'arrow-right', 'arrow-bottom', 'arrow-left']
+			}, {
+				title: 'ANGLE',
+				list: ['angle-top', 'angle-right', 'angle-bottom', 'angle-left']
+			}, {
+				title: 'LOCK',
+				list: ['lock', 'unlock']
+			}, {
+				title: 'HEART',
+				list: ['heart', 'love']
+			}, {
+				title: 'CHECK',
+				list: ['checkbox', 'checkbox-checked', 'radio', 'radio-checked']
+			}, {
+				title: 'MATH',
+				list: ['plus', 'minus', 'plus-minus']
+			}, {
+				title: 'RPG-WEAPON',
+				list: ['sword', 'katana', 'axe', 'double-bit-axe', 'hammer', 'knife', 'kitchen-knife', 'armor', 'shield', 'shield2', 'boot', 'target']
+			}, {
+				title: 'RPG-ITEM',
+				list: ['sack', 'potions-lg', 'potions-md', 'potions-sm', 'syrup']
+			}, {
+				title: 'WAR',
+				list: ['aircraft', 'fighter', 'tank', 'tank2', 'tank3', 'tank4']
+			}
 		]
 	},
 	components: {
@@ -48,41 +74,56 @@ let css_icon_vm = new Vue({
 				}
 			}
 		},
-		'guide': {
-			template: `
-				<div class="container guide">
-					<h2 class="title">Descriptions:</h2>
-					Icons' behavior depend on it's HTML attribute,
-					<p v-for="line in lines">{{line}}</p>
-				</div>
-			`,
+		// 'guide': {
+		// 	template: `
+		// 		<div class="container guide">
+		// 			<h2 class="title">Descriptions:</h2>
+		// 			Icons' behavior depend on it's HTML attribute,
+		// 			<p v-for="line in lines">{{line}}</p>
+		// 		</div>
+		// 	`,
+		// 	data: function() {
+		// 		return {
+		// 			lines: [
+		// 				`<css-icon> has two properties, ':icon-name' and ':group'. `,
+		// 				`The first one is related to its display, while the other one is the name of icons group, which the icon will turn it's class to when being click.`,
+		// 				` Icons' class will return to default when you click it again .`
+		// 			]
+		// 		}
+		// 	}
+		// },
+		'css-group': {
+			props: ['icon', 'group'],
+			template: '<a class="css-icon css-group" href="javascript:;"><i :class="`css-icon-`+icon"></i><span class="icon-name">{{icon}}</span></a>',
 			data: function() {
 				return {
-					lines: [
-						`<css-icon> has two properties, ':icon-name' and ':group'. `,
-						`The first one is related to its display, while the other one is the name of icons group, which the icon will turn it's class to when being click.`,
-						` Icons' class will return to default when you click it again .`
-					]
-				}
-			}
-		},
-		'css-icon': {
-			props: ['iconName', 'group'],
-			template: '<a class="css-icon" href="javascript:;" @click="toggle"><i :class="`css-icon-`+(iconTarget||iconName)"></i><span class="icon-name">{{iconName}}</span></a>',
-			data: function() {
-				return {
-					iconTarget: undefined
+					idx: 0,
+					len: this.group.length
 				}
 			},
 			methods: {
-				toggle: function() {
-					if(this.group) {
-						let len;
-						do {
-							len = Math.floor(this.group.length * Math.random());
-						} while(this.group[len] === this.iconName);
-						this.iconTarget = this.iconTarget ? undefined : this.group[len];
-					}
+				random() {
+					return Math.floor(Math.random() * this.len);
+				},
+				change() {
+					this.idx = (this.idx + 1) % this.len;
+					this.icon = this.group[this.idx];
+				}
+			},
+			mounted() {
+				let _this = this;
+				this.icon = this.group[this.idx];
+
+				setInterval(function() {
+					_this.change();
+				}, 2000);
+			}
+		},
+		'css-icon': {
+			props: ['iconName'],
+			template: '<a class="css-icon" href="javascript:;"><i :class="`css-icon-`+iconName"></i><span class="icon-name">{{iconName}}</span></a>',
+			data: function() {
+				return {
 				}
 			}
 		}

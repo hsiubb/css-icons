@@ -10,17 +10,18 @@
 <body>
 	<div id="css-icon">
 		<search-bar></search-bar>
-		<guide></guide>
+		<!-- <guide></guide> -->
 
-		<div class="container clrfix">
+		<!-- <div class="container clrfix">
 			<h2 class="title">{{elementsTitle}}</h2>
 			<css-icon v-for="icon in iconsList" :group="iconsList" :icon-name="icon"></css-icon>
-		</div>
+		</div> -->
 
 		<div class="container clrfix">
-			<h2 class="title">{{groupsTitle}}</h2>
 			<template v-for="group in groupList">
-				<css-icon v-for="icon in group" :group="group" :icon-name="icon"></css-icon>
+				<h2 class="title">{{group.title}}</h2>
+			    <css-group :group="group.list"></css-group>
+				<css-icon v-for="icon in group.list" :icon-name="icon"></css-icon>
 				<div class="clr"></div>
 			</template>
 		</div>

@@ -604,10 +604,12 @@
 	height: .3em;
 	border-width: 0 .05em 0 .05em;
 }
+.css-icon-battery-low:after {box-shadow: -.75em 0 1px 0 currentColor;}
+.css-icon-battery-mid:after {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor;}
+.css-icon-battery:after {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor, -.45em 0 1px 0 currentColor;}
 .css-icon-battery-full:after {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor, -.45em 0 1px 0 currentColor, -.3em 0 1px 0 currentColor;}
-.css-icon-battery:after {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor;}
 @keyframes charge {
-	0 {box-shadow: -.75em 0 1px 0 transparent, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
+	0% {box-shadow: -.75em 0 1px 0 transparent, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
 	30% {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 transparent, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
 	50% {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor, -.45em 0 1px 0 transparent, -.3em 0 1px 0 transparent;}
 	70% {box-shadow: -.75em 0 1px 0 currentColor, -.6em 0 1px 0 currentColor, -.45em 0 1px 0 currentColor, -.3em 0 1px 0 transparent;}
